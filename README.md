@@ -29,7 +29,7 @@ There are two flags currently implemented as arguements for the code.
 
 To use this code simply run:
 
-    python thumbnail.py -I 'path/to/file'
+    python thumbnail.py -I path/to/file
 
 The thumbnails will be generated in a folder in the same directory as the python script. The folder will be titled whatever the video's title is + _frames. 
 
