@@ -11,19 +11,21 @@ The following packages are needed for use of code snippet in addition to Python:
 - FFMPY
 
 To install FFMPEG, Homebrew was used on a Mac with the simple command:
+
     brew install ffmpeg
 
 Additionally, the source code can be directly downloaded from https://ffmpeg.org/download.html.
 
 Installation of the python package FFMPY can be completed by using:
+
     pip install ffmpy
 
 Once both of these packages are succesfully installed, the code can be copied or downloaded to be used.
 
 There are two flags currently implemented as arguements for the code.
 
-- -I - a flag for the input file. (Required for code to run)
-- -V - a simple version flag to describe the version of the file.
+    -I :a flag for the input file. (Required for code to run)
+    -V :a simple version flag to describe the version of the file.
 
 To use this code simply run:
 
