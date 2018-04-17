@@ -2,8 +2,6 @@
 
 This is a simple python snippet to convert a specified video to a collection of thumbnails.
 
-*Additional information on code and original idea located here:
-https://1mhassan.wordpress.com/2017/05/08/using-ffmpeg-to-create-video-thumbnails-in-python/
 
 The following packages are needed for use of code snippet in addition to Python:
 
