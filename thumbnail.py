@@ -3,7 +3,7 @@ import argparse
 import shutil
 from ffmpy import FFmpeg
 
-def run_example():
+def run_conversion():
     #creation of parser
     parser = argparse.ArgumentParser()  
     parser.add_argument("-V", "--version", help="show program version", action="store_true")
@@ -47,4 +47,4 @@ def run_example():
 
 
 if __name__ == '__main__':
-    run_example()
+    run_conversion()
