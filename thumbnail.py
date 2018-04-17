@@ -1,6 +1,5 @@
 import os, sys
 import argparse
-import cv2
 import shutil
 from ffmpy import FFmpeg
 
