@@ -1,3 +1,4 @@
 *.mp4
 test_frames
 test_frames/*
+.vscode
