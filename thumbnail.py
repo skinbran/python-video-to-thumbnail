@@ -8,6 +8,7 @@ def run_conversion():
     parser = argparse.ArgumentParser()  
     parser.add_argument("-V", "--version", help="show program version", action="store_true")
     parser.add_argument("-I", "--input", help="input file")
+    parser.add_argument("-N", "--number", help="number of seconds between thumbnails")
     
     # read arguments from the command line
     args = parser.parse_args()
@@ -23,6 +24,14 @@ def run_conversion():
     else:
         print("\nFile not found or input not specified correctly. Be sure to include the -I flag for input.")
         sys.exit()
+
+    if args.number:
+        num=args.number
+        fps = str(1/int(num))
+    else:
+        num=4
+        fps=str(.25)
+    
        
     #erase folders if filepath exists
     if os.path.exists(video_name+'_frames'):
@@ -31,7 +40,7 @@ def run_conversion():
     os.makedirs(video_name+'_frames')
 
     #use FFmpeg to create thumbnails from video file.
-    ff = FFmpeg(inputs={video_input: None}, outputs={video_name+"_frames/thumb_%d"+".png": ['-vf', 'fps=.5']})
+    ff = FFmpeg(inputs={video_input: None}, outputs={video_name+"_frames/thumb_%d"+".png": ['-vf', 'fps='+fps]})
 
     # print(ff.cmd)
 
