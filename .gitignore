@@ -1,5 +1,8 @@
 *.mp4
 test_frames
 test_frames/*
-.vscode
 .vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
