@@ -14,25 +14,28 @@ def run_conversion():
     args = parser.parse_args()
 
     if args.version:  
-        print("This is a thumbnail generator for videos, still in development.")
+        print("\nThis is a thumbnail generator for videos, still in development.\n")
         sys.exit()
 
     if args.input:
-        print('\nExecuting process on', args.input, '\n')
         video_input = args.input
         video_name = args.input.split('.')[0]
     else:
-        print("\nFile not found or input not specified correctly. Be sure to include the -I flag for input.")
+        print("\nError: File not found or input not specified correctly. Be sure to include the -I flag for input.")
         sys.exit()
 
     if args.number:
         num=args.number
-        fps = str(1/int(num))
+        try:
+            fps = str(1/int(num))
+        except:
+            print('\nError: Please enter a valid number for -N\n')
+            sys.exit()
     else:
         num=4
         fps=str(.25)
     
-       
+    print('\nExecuting process on', args.input, '\n')
     #erase folders if filepath exists
     if os.path.exists(video_name+'_frames'):
         print('\nOverwriting existing directory...\n')
@@ -49,7 +52,7 @@ def run_conversion():
         print("\nGenerating Thumbnails...\n")
         ff.run()
     except:
-        print('\nError running thumbnail conversion.\n')
+        print('\nError: Error while running thumbnail conversion.\n')
         sys.exit()
 
     print("\nThumbnails generated successfully.\n")
